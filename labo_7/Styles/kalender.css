@@ -1,0 +1,21 @@
+table,th, td{
+    border: solid 1px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+td:first-child, td:last-child{
+    background-color: lightblue;
+}
+thead{
+    background-color: rgb(170,170,200);
+}
+.dagen{
+    background-color: rgb(200,190,240);
+}
+td.vorige{
+    color: darkgray;
+    background-color: gray;
+}
+.dagvandaag{
+    background-color:  rgb(250,120,120);
+}

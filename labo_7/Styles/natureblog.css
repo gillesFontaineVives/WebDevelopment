@@ -1,0 +1,37 @@
+body{
+    width: 95%;
+    margin: auto;
+}
+#header{
+    margin-bottom: -30px;
+    background-image: url("../natureblog/images/header.jpg");
+    background-size: cover ;
+    background-repeat:no-repeat ;
+}
+#header > header > h1{
+    font-family: "Arial", serif;
+    font-size: 50px;
+    padding: 2px;
+    color: white;
+}
+nav{
+    padding: 5px;
+    background-color: dimgray;
+}
+nav > a{
+    color: lightgreen;
+    text-decoration: none;
+}
+article{
+    margin-bottom: -30px;
+    background-color: lightgray;
+}
+.articles{
+    padding-top: 15px;
+    color: darkgray;
+    font-size: 30px;
+    text-decoration: underline;
+}
+footer{
+    margin-top: 35px;
+}
