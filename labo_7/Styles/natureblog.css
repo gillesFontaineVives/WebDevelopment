@@ -2,13 +2,14 @@ body{
     width: 95%;
     margin: auto;
 }
-#header{
+.header{
     margin-bottom: -30px;
     background-image: url("../natureblog/images/header.jpg");
     background-size: cover ;
+    height: 150px;
     background-repeat:no-repeat ;
 }
-#header > header > h1{
+.header  > h1{
     font-family: "Arial", serif;
     font-size: 50px;
     padding: 2px;
