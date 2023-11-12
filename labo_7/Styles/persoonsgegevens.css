@@ -17,3 +17,9 @@ table tfoot ul.active, table tfoot ul a:hover { text-decoration: none;border-col
 tr.alt > td.Onbekend, td.Onbekend{
     background-color: red;
 }
+
+main {
+    border: 1px solid #36752D;
+    border-radius: 3px;
+    padding: -2px;
+}
