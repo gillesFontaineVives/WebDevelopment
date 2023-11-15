@@ -1,5 +1,10 @@
 body{
     width: 95%;
+    font-family: Verdana, helvetica ,arial;
+    font-size: 1.2em;
+}
+a{
+    color: black;
 }
 .special{
     margin-top: 15px;
@@ -9,18 +14,37 @@ body{
     float: right;
     width: 30%;
 }
+.special > p > a:hover{
+    color: brown;
+}
 .orgin{
+    box-sizing: border-box;
     width: 70%;
+    padding: 10px;
 }
 .special > h2 {
+    margin: 0px;
     color: red;
 }
-.orgin >h2 {
-    color: cyan;
+.orgin > article > h1 {
+    color: #007e7e;
+    font-size: 150%;
+}
+.orgin > article > h2{
+  color: #007e7e;
+  font-size: 130%;
 }
 #guarantee{
-    background-color: cadetblue;
+    background-image: url("../begin_cocktail_bar/images/background.gif");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size:40px ;
     padding: 10px;
+    padding-left: 40px;
+    border:dashed white 1px;
+    background-color: #a7cece;
+    color: rgb(44, 44, 44);
+    margin: 30px;
 }
 .midden{
     display: block;
@@ -28,6 +52,10 @@ body{
     margin-right: auto;
 }
 #weekly{
+    margin-bottom: 0px;
     background-image: url("../begin_cocktail_bar/images/cocktail.gif");
-    height: 60px;
+}
+footer{
+    text-align: center;
+    font-size: 50%;
 }
