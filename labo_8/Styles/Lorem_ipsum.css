@@ -1,0 +1,13 @@
+body{
+    margin: 0px;
+}
+div{
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+}
+section{
+    border: solid black 1px;
+}
+
+
