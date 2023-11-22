@@ -1,0 +1,17 @@
+body{
+    font-size: 1.25em;
+}
+article:nth-child(2n) img{
+    float: right;
+}
+article:nth-child(2n+1) img{
+    float: left;
+}
+img,p{
+    margin: 10px;
+}
+article{
+    display: inline-block;
+    border: solid 1px black;
+    margin: 10px
+}
