@@ -75,10 +75,32 @@ section > div:last-child{
 }
 
 .foto{
+    display: inline-block;
     margin: 20px;
+    margin-right: 40px;
     background-color: white;
-    border: black 1px dotted;
+    border: black 2px dotted;
     padding: 10px;
     height: 180px;
     width: 180px;
+}
+
+footer{
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+}
+footer > div{
+    display: inline-block;
+}
+
+footer > nav{
+    margin-left: 120px;
+    display: inline-block;
+}
+li{
+
+}
+a:hover{
+    color: red;
 }
