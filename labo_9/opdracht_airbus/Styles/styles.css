@@ -7,12 +7,14 @@ body{
 }
 header{
     height: 200px;
+    margin-top: 8px;
     background-image: url("../images/bgsky3.jpg");
     background-repeat: no-repeat;
     color: darkblue;
 }
 header > p:first-child{
     font-size: 300%;
+    margin-top: 0px;
     font-weight: bold;
     font-style: italic;
 }
@@ -51,16 +53,16 @@ section{
 
 section > article{
     text-align: justify;
-     padding-right:30px;
+    padding-right:30px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 section > div:first-child{
     float: left;
     background-repeat: no-repeat;
     padding-top: 20px;
-    padding-right:20px;
+    padding-right:40px;
     padding-left: 20px;
     margin-bottom: 80px;
 }
