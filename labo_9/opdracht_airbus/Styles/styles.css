@@ -60,7 +60,6 @@ section > article{
 
 section > div:first-child{
     float: left;
-    background-repeat: no-repeat;
     padding-top: 20px;
     padding-right:40px;
     padding-left: 20px;
