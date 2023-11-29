@@ -1,0 +1,13 @@
+body{
+    width: 95%;
+}
+.row > div{
+    height: 50px;
+    border: solid black 1px;
+}
+@media screen and (max-width: 576px) {
+    .row > div:nth-child(2n) {
+        display: none;
+    }
+}
+
