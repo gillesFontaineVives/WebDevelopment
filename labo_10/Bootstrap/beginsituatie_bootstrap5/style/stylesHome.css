@@ -21,6 +21,7 @@ article{
     margin-bottom: 10px;
     padding: 5px;
     background-color: #b1ddf1;
+    height: 300px;
 }
 a{
     color: darkcyan;
@@ -40,6 +41,6 @@ table,th, td{
 ol li{
     list-style-position: inside;
 }
-.hoogte{
-    height: 40px;
+p{
+    margin: 25px;
 }
