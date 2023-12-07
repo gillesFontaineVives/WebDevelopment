@@ -3,6 +3,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(4, auto);
+    gap: 1em;
 }
 section div {
     color: white;
@@ -26,6 +27,10 @@ section div {
     background: #33a8a5;
 }
 .item-3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
     background: #30997a;
 }
 .item-4 {
@@ -66,6 +71,77 @@ section div {
     grid-row-start: 1;
     grid-row-end: 2;
     background: #4464a1;
+}
+@media screen and (min-width: 760px) {
+    section {
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    .item-1 {
+        display: inline;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background: #b03532;
+    }
+    .item-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background: #33a8a5;
+    }
+    .item-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background: #30997a;
+    }
+    .item-4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: #6a478f;
+    }
+    .item-5 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: #da6f2b;
+    }
+    .item-6 {
+        display: inline;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: #3d8bb1;
+    }
+    .item-7 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background: #e03f3f;
+    }
+    .item-8 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background: #59a627;
+    }
+    .item-9 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background: #4464a1;
+    }
 }
 
 
