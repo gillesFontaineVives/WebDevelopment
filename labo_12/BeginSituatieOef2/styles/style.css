@@ -13,17 +13,20 @@ header, footer{
 }
 
 nav{
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     background-color: #ccc;
     padding: 5px 2px;
 }
 nav a{
+    flex-grow: 2;
     text-decoration: none;
     color: #ddaa00;
     background-color: white;
     display: inline-block;
     text-align: center;
-    border: 1px #ccc solid;
+    border: 1px black solid;
     margin:0 5px;
 }
 img{
