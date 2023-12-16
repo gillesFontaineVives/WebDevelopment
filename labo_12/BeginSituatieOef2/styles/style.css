@@ -30,7 +30,7 @@ nav a{
     margin:0 5px;
 }
 img{
-    width: 100%;
+    width: 95%;
     padding: Opx;
 }
 section  a{
@@ -41,6 +41,7 @@ section  a{
     border:  1px #333 solid;
 }
 main{
+    display: block;
     background-color: grey;
 }
 h1{
@@ -61,5 +62,6 @@ section{
 @media screen and (min-width: 700px){
     main{
         display: flex;
+        justify-content: space-evenly;
     }
 }
