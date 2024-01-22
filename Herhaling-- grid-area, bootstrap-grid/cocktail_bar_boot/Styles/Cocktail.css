@@ -1,0 +1,48 @@
+body{
+    width: 95%;
+    font-family: Verdana, helvetica ,arial;
+    font-size: 1.2em;
+}
+a{
+    color: black;
+}
+.special{
+    margin-top: 15px;
+    border: 1px solid lightblue;
+    text-align: center;
+}
+.special > p > a:hover{
+    color: brown;
+}
+.special > h2 {
+    margin: 0px;
+    color: red;
+}
+.orgin > article > h1 {
+    color: #007e7e;
+    font-size: 150%;
+}
+.orgin > article > h2{
+  color: #007e7e;
+  font-size: 130%;
+}
+#guarantee{
+    background-image: url("../images/background.gif");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size:40px ;
+    padding: 10px;
+    padding-left: 40px;
+    border:dashed white 1px;
+    background-color: #a7cece;
+    color: rgb(44, 44, 44);
+    margin: 30px;
+}
+#weekly{
+    margin-bottom: 0px;
+    background-image: url("../images/cocktail.gif");
+}
+footer{
+    text-align: center;
+    font-size: 50%;
+}

@@ -1,0 +1,223 @@
+/** Volgende CSS gaan we ze geven **/
+body{
+    width: 95%;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    margin: auto;
+}
+
+.respimg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1{
+    text-align: left;
+    font-size: 2.5em;
+    border-bottom: solid black 2px;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 150%;
+}
+
+.logo{
+    display: block;
+    margin: 0 auto;
+    border-bottom: solid #ebe8e8 1px;
+}
+
+#header{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: #5b4746;
+}
+
+a:hover{
+    text-decoration: underline 2px #fff100 solid;
+}
+
+.grid {
+    margin: 0 auto;
+    width: 600px;
+    display: grid;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5px;
+    grid-template-areas: "navrecipes planning learn shop peolpe holiday more";
+}
+
+.planning, .learn, .shop, .peolpe, .holiday,.more{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    border-left: solid #ebe8e8 1px;
+}
+
+.navrecipes{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+
+#mainHeader{
+    background-image: url("../Images/headerimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    width: screen;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px #8D99AE;
+    line-height: 500px;
+}
+
+.recipes{
+    margin: 0 auto;
+    width: 600px;
+}
+.gridrecipes{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3,auto);
+}
+
+.block{
+    width: 500px;
+    text-align:left;
+}
+
+.bbqart{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.bbqimg{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.burgerart{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:2 ;
+    grid-row-end: 3;
+}
+
+.burgerimg{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:2 ;
+    grid-row-end: 3;
+}
+
+.mediterraneanart{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:3;
+    grid-row-end: 4;
+}
+
+.mediterraneanimg{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:2 ;
+    grid-row-end: 3;
+}
+
+.gridrecipes > article{
+    border-top: 1px solid #ddd;
+}
+.kicker{
+    text-align: left;
+    margin: 1px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #ff4d56;
+}
+
+.itemTitle{
+    text-align: left;
+    color: black;
+}
+
+.itemBody{
+    text-align: left;
+    color: #666;
+    line-height: 15px;
+}
+
+.auteur{
+    margin-top: 10px;
+    display: inline-block;
+    padding-right: 10px;
+    border-right: solid #ebe8e8 1px;
+    font-style: italic;
+}
+
+.recommended{
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 50px;
+}
+
+.image{
+    margin-bottom: 25px;
+}
+
+footer{
+    border-top: 1px solid #ddd;
+}
+
+.time{
+    
+    display: inline-block;
+    color: #666;
+    padding-left: 10px;
+
+}
+
+#left{
+    padding-top: 20px;
+    float: left;
+    width: screen/2;
+    justify-content: center;
+    align-items: center;
+    line-height: 2em;
+}
+
+#right{
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    float:right;
+    width: screen/2;
+    line-height: 2em;
+}
+
+@media screen and (min-width: 770px){
+    figure, .grid, .recipes,.recommended{
+        width: 750px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    #mainHeader{
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    figure, .grid ,.recipes,.recommended{
+        width: 980px;
+    }
+}
