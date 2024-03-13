@@ -8,68 +8,84 @@ const valideer = () => {
 	valideerFamilieNaam()
 	valideerGeboorte();
 	valideerEmail();
+	valideerAaantalKinderen();
 };
 
 const valideerVoornaam = () => {
 	let txtVoornaam = document.getElementById("txtVoornaam");
-	let errVoornaam = document.getElementById("errVoornaam");
 	let voornaam = txtVoornaam.value.trim();
-	console.log(voornaam);
 	if (voornaam.length > 30) {
-		txtVoornaam.className="invalid"; // invalid class instellen
-		errVoornaam.innerHTML = "max. 30 karakters";
+		reportError(txtVoornaam,"max. 30 karakters");
 	} else {
-		txtVoornaam.className=""; // alle classes verwijderen
-		errVoornaam.innerHTML = "";
+		clearError(txtVoornaam);
 	}
 };
 const valideerFamilieNaam = () => {
 	let txtFamilie = document.getElementById("txtFamilienaam");
-	let errFamilie = document.getElementById("errFamilienaam");
 	let familie = txtFamilie.value.trim();
 	if (familie.length === 0){
-		errFamilie.innerHTML = "Verplicht veld";
+		reportError(txtFamilie,"Verplicht veld");
 	}else if (familie.length > 50) {
-		txtFamilie.className="invalid"; // invalid class instellen
-		errFamilie.innerHTML = "max. 50 karakters";
+		reportError(txtFamilie,"max. 50 karakters");
 	} else {
-		txtFamilie.className=""; // alle classes verwijderen
-		errFamilie.innerHTML = "";
+		clearError(txtFamilie);
 	}
 };
 
 const valideerGeboorte = () => {
 	let txtGeboorte = document.getElementById("txtGeboorte");
-	let errGeboorte = document.getElementById("errGeboorte");
 	let geboorte = txtGeboorte.value.trim();
 	let indexstreep = geboorte.indexOf("-");
 	let indexstreep2 = geboorte.indexOf("-",indexstreep+1);
 	if (geboorte.length === 0){
-		errGeboorte.innerHTML = "Verplicht veld";
+		reportError(txtGeboorte,"Verplicht veld");
 	}else if (indexstreep !== 4 && indexstreep2 !== 7) {
-		txtGeboorte.className="invalid"; // invalid class instellen
-		errGeboorte.innerHTML = "formaat is moet jjjj-mm-dd";
+		reportError(txtGeboorte,"formaat moet jjjj-mm-dd zijn");
 	} else {
-		txtGeboorte.className=""; // alle classes verwijderen
-		errGeboorte.innerHTML = "";
+		clearError(txtGeboorte);
 	}
 
 };
 const valideerEmail = () => {
 	let txtEmail = document.getElementById("txtEmail");
-	let errEmail = document.getElementById("errEmail");
 	let Email = txtEmail.value.trim();
 	let indexAddteken = Email.indexOf("@");
 	if (Email.length === 0){
-		errEmail.innerHTML = "Verplicht veld";
-	}else if (indexAddteken === -1 && Email.substring(0,indexAddteken) === "" && Email.substring(indexAddteken,indexAddteken+1) === ""){
-		txtEmail.className="invalid"; // invalid class instellen
-		errEmail.innerHTML = "geen geldig email adres";
+		reportError(txtEmail,"Verplicht veld",);
+	}else if (indexAddteken === -1 || Email.substring(indexAddteken-1,indexAddteken) === "" || Email.substring(indexAddteken+1,indexAddteken+2) === ""){
+		reportError(txtEmail,"geen geldig email adres");
 	} else {
-		txtEmail.className=""; // alle classes verwijderen
-		errEmail.innerHTML = "";
+		clearError(txtEmail);
 	}
 };
+
+const valideerAaantalKinderen = () => {
+	let txtKinderen = document.getElementById("txtKinderen");
+	let aantalKinderen = txtKinderen.value.trim();
+	if(aantalKinderen.length > 0){
+		if (!isGetal(aantalKinderen)){
+			reportError(txtKinderen,"Is geen positief getal");
+		}else if (Math.sign(parseInt(aantalKinderen)) === -1){
+			reportError(txtKinderen,"Is geen positief getal");
+		}
+		else if (parseInt(aantalKinderen) > 99){
+			reportError(txtKinderen,"Is te vruchtbaar")
+		} else {
+			clearError(txtKinderen);
+		}
+	}
+};
+
+const reportError = (element, message) => {
+	element.className="invalid";
+	element.nextElementSibling.innerHTML = message; 
+};
+
+const clearError = (element) => {
+	element.className="";
+	element.nextElementSibling.innerHTML = "";
+};
+
 const isGetal = (tekst) => {
 	return !isNaN(tekst);
 }
