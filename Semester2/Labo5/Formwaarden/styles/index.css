@@ -1,3 +1,17 @@
 .right{
     margin-left: 40px;
 }
+.Flex-container{
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+}
+.column {
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top:  10px;
+}
+.label{
+    text-align: right;
+    padding-right: 5%;
+}
