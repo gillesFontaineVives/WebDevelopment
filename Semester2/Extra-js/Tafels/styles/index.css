@@ -1,0 +1,9 @@
+#tafel {
+    outline: none;
+  }
+#tafel:focus {
+    border: 3px solid lightblue;
+  }
+#errorMessage {
+	color:red;
+}
