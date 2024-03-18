@@ -5,5 +5,16 @@
     border: 3px solid lightblue;
   }
 #errorMessage {
-	color:red;
+    color: red;
+}
+.Tafeltabel{
+    width: 300px;
+    border: 1px black solid;
+}
+.divspec:nth-child(2n+1){
+    background-color: lightgray;
+}
+.header{
+    background-color: blue;
+    color: white;
 }
