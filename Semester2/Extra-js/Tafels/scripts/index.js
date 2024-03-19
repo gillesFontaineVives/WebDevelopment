@@ -6,21 +6,23 @@ const setup = () => {
 const tafelsrekenen = () => {
 	let tafeltekst = document.getElementById("tafel").value;
 	let error = document.getElementById("errorMessage");
-
-	let taftabel = document.getElementsByClassName("Tafeltabel");
-	if(taftabel.length !== 0){
-		console.log(taftabel);
-		verwijderAlleChildren(taftabel[0]);
-	} else {
-		tafelTabel = document.createElement("div");
-		tafelTabel.className = "Tafeltabel";
-		document.body.appendChild(tafelTabel);
-	}
-
-	let datum = new Date();
-	let tijd = datum.getHours() + ":" + datum.getMinutes() + ":" + datum.getSeconds();
-
 	if(isGetal(tafeltekst) && tafeltekst.length !== 0){
+		error.textContent = "";
+
+		let tafelTabel = document.getElementById(tafeltekst);
+		if(tafelTabel !== null){
+			console.log(tafelTabel);
+			verwijderAlleChildren(tafelTabel);
+		} else {
+			tafelTabel = document.createElement("div");
+			tafelTabel.className = "Tafeltabel";
+			tafelTabel.id = tafeltekst;
+			document.body.appendChild(tafelTabel);
+		}
+
+		let datum = new Date();
+		let tijd = datum.getHours() + ":" + datum.getMinutes() + ":" + datum.getSeconds();
+
 		let div = document.createElement("div");
 		div.className = "header";
 		div.innerHTML = "Tafel van " + tafeltekst + " aangemaakt op " + tijd + "\n";
