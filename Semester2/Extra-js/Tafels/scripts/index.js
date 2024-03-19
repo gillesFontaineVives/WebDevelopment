@@ -4,15 +4,21 @@ const setup = () => {
 }
 
 const tafelsrekenen = () => {
-	verwijderAlleChildren(div);
 	let tafeltekst = document.getElementById("tafel").value;
 	let error = document.getElementById("errorMessage");
 
-	let tafelTabel = document.createElement("div");
-	tafelTabel.className = "Tafeltabel";
+	let taftabel = document.getElementsByClassName("Tafeltabel");
+	if(taftabel.length !== 0){
+		console.log(taftabel);
+		verwijderAlleChildren(taftabel[0]);
+	} else {
+		tafelTabel = document.createElement("div");
+		tafelTabel.className = "Tafeltabel";
+		document.body.appendChild(tafelTabel);
+	}
 
-	var datum = new Date();
-	var tijd = datum.getHours() + ":" + datum.getMinutes() + ":" + datum.getSeconds();
+	let datum = new Date();
+	let tijd = datum.getHours() + ":" + datum.getMinutes() + ":" + datum.getSeconds();
 
 	if(isGetal(tafeltekst) && tafeltekst.length !== 0){
 		let div = document.createElement("div");
@@ -27,8 +33,6 @@ const tafelsrekenen = () => {
 			div.innerHTML += tafeltekst + " x " + i + " = " +  number + "\n";
 			tafelTabel.appendChild(div);
 		}
-
-		document.body.appendChild(tafelTabel);
 	}else{
 		error.innerHTML = "Geef een nummer";
 	}

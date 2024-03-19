@@ -8,13 +8,20 @@
     color: red;
 }
 .Tafeltabel{
+    margin-top: 10px;
     width: 300px;
     border: 1px black solid;
 }
+
+.divspec{
+    padding: 5px;
+}
+
 .divspec:nth-child(2n+1){
     background-color: lightgray;
 }
 .header{
+    padding-left: 10px;
     background-color: blue;
     color: white;
 }
