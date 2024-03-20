@@ -7,6 +7,15 @@
 	border:1px solid black;
 }
 
+.colorDemo-klein {
+	margin-top: 30px;
+	margin-left: 60px;
+	display: inline-block;
+	width:100px;
+	height:100px;
+	border:1px solid black;
+}
+
 p{
 	display: inline-block;
 	margin-left: 5px;
@@ -19,4 +28,9 @@ p{
 	border: black 2px solid;
 	width: 40%;
 	display: flex;
+}
+.delete{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 100px;
 }
