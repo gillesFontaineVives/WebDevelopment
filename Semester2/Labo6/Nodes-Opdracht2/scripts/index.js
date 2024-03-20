@@ -4,6 +4,10 @@ const setup = () => {
     for (let i = 0; i < li.length; i++) {
         li[i].className += "listitem";
     }
+    let temp = document.querySelectorAll(".listitem");
+    for (let i = 0; i < temp.length; i++) {
+        temp[i].style.color = "red";
+      }
     let img = document.createElement("img");
     img.src = "images/me.png";
     body.appendChild(img);
