@@ -11,7 +11,7 @@ const substring = () => {
 	let txteinde = document.getElementById("txteinde");
 	
 	let omzetten = woord.value;
-	let deel = omzetten.substr(txtbegin.value,txteinde.value-2);
+	let deel = omzetten.substring(txtbegin.value,txteinde.value-2);
 
 	txtOutput.innerHTML=deel;
 }

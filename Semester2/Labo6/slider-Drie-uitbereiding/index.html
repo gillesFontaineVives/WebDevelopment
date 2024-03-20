@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="nl">
+<head> 
+	<title>Demonstratie slider</title>
+	<script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+	<link rel="stylesheet" href="styles/styles.css"/>
+</head> 
+<body> 
+<section>
+	<div class="picker">
+		<div class="delen">
+			<label class="hidden" for="rood"></label><div>0<input id="rood" type="range" class="slider" value="50" min="0" max="255" />255<p>Rood:</p><p class="values"></p></div>
+			<label class="hidden" for="groen"></label><div>0<input id="groen" type="range" class="slider" value="50" min="0" max="255" />255<p>Groen:</p><p class="values"></p></div>
+			<label class="hidden" for="blue"></label><div>0<input id="blue" type="range" class="slider" value="50" min="0" max="255" />255<p>Blauw:</p><p class="values"></p></div>
+			<label class="hidden" for="zicht"></label><div>0<input id="zicht" type="range" class="slider" value="5" min="0" max="10" />1<p>Doorzicht:</p><p class="values"></p></div>
+		</div>
+		<div class="colorDemo" />
+		<button id="save">save</button>
+    </div>
+</section>
+</body> 
+</html> 

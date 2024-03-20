@@ -11,7 +11,6 @@ const tafelsrekenen = () => {
 
 		let tafelTabel = document.getElementById(tafeltekst);
 		if(tafelTabel !== null){
-			console.log(tafelTabel);
 			verwijderAlleChildren(tafelTabel);
 		} else {
 			tafelTabel = document.createElement("div");
